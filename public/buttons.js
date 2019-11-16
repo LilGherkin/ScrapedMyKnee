@@ -9,14 +9,16 @@ $(document).on("click", ".ScrapeButton", () => {
 });
 
 //Create a card for each Scab we get from scraping. 
-function Cards(Scab) {
-    for (let i = 0; i < Scab.length; i++) {
+function Cards(Scabs) {
+    for (let i = 0; i < Scabs.length; i++) {
         let Thread = {
             title: "",
             link: "",
+            id: ""
         };
-        Thread.title = Scab[i].title;
-        Thread.link = reddit + Scab[i].link;
+        Thread.title = Scabs[i].title;
+        Thread.link = reddit + Scabs[i].link;
+        Thread.id = Scabs[i].redditId
         //Creates the card
         $(".row").after(
             `<div class="col s12 m6">\

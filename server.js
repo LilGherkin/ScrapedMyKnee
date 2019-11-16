@@ -11,12 +11,12 @@ app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Handle API routes
-require("./routes/apiRoutes.js")(app);
-require("./routes/htmlRoutes.js")(app);
+require("./routes/APIRoutes.js");
+require("./routes/HTMLRoutes.js");
 
 //Set the port. 
 let PORT = process.env.PORT || 3000;
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/wonderfuldb";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Articles";
 
 //Connect to a database. 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
