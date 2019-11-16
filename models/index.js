@@ -1,4 +1,5 @@
+//Bundles and exports
 module.exports = {
-    Article: require("./Article"),
-    Note: require("./Note")
-};
+    article: require("./article"),
+    note: require("./note")
+  };

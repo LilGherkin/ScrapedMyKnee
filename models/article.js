@@ -12,11 +12,15 @@ let ArticleSchema = new Schema({
     link: {
         type: String,
         required: true
+    },
+    redditID: {
+        type: String,
+        required: true
     }
 });
   
 // This creates our model from the above schema, using mongoose's model method
-const Article = mongoose.model("article", ArticleSchema);
+const Article = mongoose.model("Article", ArticleSchema);
   
 // Export the Article model
 module.exports = Article;

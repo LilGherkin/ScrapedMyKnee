@@ -11,8 +11,8 @@ app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Handle API routes
-require("./routes/APIRoutes.js");
-require("./routes/HTMLRoutes.js");
+require("./routes/APIRoutes.js")(app);
+require("./routes/HTMLRoutes.js")(app);
 
 //Set the port. 
 let PORT = process.env.PORT || 3000;
