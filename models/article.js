@@ -1,21 +1,22 @@
 //Dependencies
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
-//Save the article to the database with a title and a url. 
-const ArticleSchema = new Schema({
+//Saver
+let ArticleSchema = new Schema({
+    // Title is required and of type String
     title: {
-        type: String,
-        required: true
+      type: String,
+      required: true
     },
-    url: {
+    // Link is required, and is a string
+    link: {
         type: String,
         required: true
     }
 });
-
-//For future reference.
+  
+// This creates our model from the above schema, using mongoose's model method
 const Article = mongoose.model("article", ArticleSchema);
-
-//Export it.
+  
+// Export the Article model
 module.exports = Article;

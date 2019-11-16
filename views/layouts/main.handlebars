@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/crepe.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="logic/logic.js"></script>
 
-
-    <title>News Crepe</title>
+    <title>News Scraper</title>
 </head>
 
-<body class="background">
-    {{{ body }}}
+<body>
+    <nav>
+        <div class="navbar-brand">
+            <a href="/" class="brand-logo">Just scraping stuff</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="ScrapeButton" href="#">Scrape</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    {{{body}}}
 </body>
-<script type="text/javascript" src="/app.js"></script>
 
 </html>
